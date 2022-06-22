@@ -1,8 +1,8 @@
 {
   "name": "@poviolabs/slack-notify-cli",
-  "version": "1.0.6",
+  "version": "1.0.13",
   "packageManager": "yarn@3.2.0",
-  "main": "dist/cjs/index.js",
+  "main": "dist/index.js",
   "bin": "./dist/index.js",
   "scripts": {
     "build": "yarn clean && yarn version patch && yarn run build:cli",
@@ -10,7 +10,7 @@
     "clean": "node tools/cleanup",
     "test": "jest --no-cache --runInBand",
     "test:cov": "jest --coverage --no-cache --runInBand",
-    "test:cli": "./dist/cjs/cli/index.js --pwd ./test --stage test",
+    "test:cli": "./dist/index.js --pwd ./test --stage test",
     "test:ts-node:cli": "ts-node -r tsconfig-paths/register ./src/index.ts --pwd ./test --stage test",
     "lint": "eslint ."
   },

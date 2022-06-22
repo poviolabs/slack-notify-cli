@@ -4532,8 +4532,8 @@ __metadata:
   linkType: hard
 
 "node-stage@poviolabs/node-stage#v1":
-  version: 1.0.3
-  resolution: "node-stage@https://github.com/poviolabs/node-stage.git#commit=166962c9bb5669d0ffdfb098810ad1ac785c81cf"
+  version: 1.0.16
+  resolution: "node-stage@https://github.com/poviolabs/node-stage.git#commit=0ce2beb3cf08e10a473fd5fcd399772848a113fc"
   dependencies:
     chalk: ^4.1.2
     dotenv: ^16.0.0
@@ -4544,8 +4544,8 @@ __metadata:
     yaml: ^2.0.0
     yargs: ^17.4.1
   bin:
-    node-stage: ./dist/cjs/cli/index.js
-  checksum: ca128d33e45936ff0cc18f002cde9c8d910ea6f839cf34cfe60dba7df0313b16eacdf1d9074e7265a47db92acb2590301e626f6436e0833e116bd8221fc04557
+    node-stage: ./dist/sh.js
+  checksum: 7dc3f524666d99423a17ced68c1750d8ddcacacd319a5b78e876a55069cb71a6c7431527b00da4d06633f8ec006dbcedf56ca037fca5ed1276c3edc1a2f6b471
   languageName: node
   linkType: hard
 

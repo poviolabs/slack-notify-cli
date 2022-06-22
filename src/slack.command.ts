@@ -6,20 +6,20 @@ import yargs from "yargs";
 import { WebClient } from "@slack/web-api";
 
 import {
+  Config,
+  getVersion,
+  getToolEnvironment,
+  logBanner,
+  logVariable,
   getCommitMessage,
   getSha,
   getShortSha,
   ReleaseStrategy,
-  Config,
   getYargsOptions,
   Option,
   YargsOptions,
   loadYargsConfig,
   getYargsOption,
-  getToolEnvironment,
-  getVersion,
-  logBanner,
-  logVariable,
 } from "node-stage";
 
 class SlackOptions implements YargsOptions {
