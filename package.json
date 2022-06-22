@@ -1,0 +1,78 @@
+{
+  "name": "@poviolabs/slack-notify-cli",
+  "version": "1.0.6",
+  "packageManager": "yarn@3.2.0",
+  "main": "dist/cjs/index.js",
+  "bin": "./dist/index.js",
+  "scripts": {
+    "build": "yarn clean && yarn version patch && yarn run build:cli",
+    "build:cli": "tsc -p ./tsconfig.json && chmod +x ./dist/index.js",
+    "clean": "node tools/cleanup",
+    "test": "jest --no-cache --runInBand",
+    "test:cov": "jest --coverage --no-cache --runInBand",
+    "test:cli": "./dist/cjs/cli/index.js --pwd ./test --stage test",
+    "test:ts-node:cli": "ts-node -r tsconfig-paths/register ./src/index.ts --pwd ./test --stage test",
+    "lint": "eslint ."
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "povio",
+    "node",
+    "config",
+    "yaml",
+    "yargs",
+    "slack"
+  ],
+  "homepage": "https://github.com/poviolabs/slack-notify-cli",
+  "bugs": "https://github.com/poviolabs/slack-notify-cli/issues",
+  "repository": {
+    "url": "https://github.com/poviolabs/slack-notify-cli",
+    "type": "git"
+  },
+  "contributors": [
+    "Marko Zabreznik <marko.zabreznik@povio.com>"
+  ],
+  "dependencies": {
+    "@slack/web-api": "^6.7.1",
+    "node-stage": "poviolabs/node-stage#v1",
+    "yargs": "^17.5.1"
+  },
+  "devDependencies": {
+    "@jest/types": "^27.5.1",
+    "@swc/core": "^1.2.165",
+    "@swc/jest": "^0.2.20",
+    "@types/eslint": "^8.4.1",
+    "@types/eslint-plugin-prettier": "^3.1.0",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^16.11.26",
+    "@types/prettier": "^2.6.0",
+    "@types/yargs": "^17.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import-helpers": "^1.2.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.6.2",
+    "source-map-support": "^0.5.21",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "tsconfig-paths": "^3.14.1",
+    "typescript": "4.6.3"
+  },
+  "engines": {
+    "node": ">= 16.14.2",
+    "yarn": ">= 3.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "verbose": true,
+    "transform": {
+      "^.+\\.(t|j)sx?$": "@swc/jest"
+    }
+  }
+}

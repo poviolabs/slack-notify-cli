@@ -1,0 +1,7 @@
+stages:
+  test:
+    slackNotify:
+      autolinkPrefix: NS-
+      autolinkTarget: https://github.com/poviolabs/node-stage/issues/
+      commitPrefix: https://github.com/poviolabs/node-stage/commit/
+      projectName: NodeStage
