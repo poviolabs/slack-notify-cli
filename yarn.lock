@@ -868,7 +868,7 @@ __metadata:
     typescript: 4.7.4
     yargs: ^17.5.1
   bin:
-    slack-notify-cli: ./dist/index.js
+    slack-notify-cli: ./dist/sh.js
   languageName: unknown
   linkType: soft
 

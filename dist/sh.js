@@ -6,7 +6,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const yargs_1 = __importDefault(require("yargs"));
 const helpers_1 = require("yargs/helpers");
-const slack_command_1 = require("./slack.command");
+const slack_command_1 = require("./commands/slack.command");
 const node_stage_1 = require("node-stage");
 (0, yargs_1.default)((0, helpers_1.hideBin)(process.argv))
     .version((0, node_stage_1.getVersion)() || "unknown")
@@ -31,4 +31,4 @@ const node_stage_1 = require("node-stage");
     process.exit(1);
 })
     .parse();
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=sh.js.map
