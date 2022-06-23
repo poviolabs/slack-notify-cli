@@ -1,6 +1,6 @@
 {
   "name": "@poviolabs/slack-notify-cli",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "packageManager": "yarn@3.2.0",
   "main": "dist/index.js",
   "bin": "./dist/index.js",

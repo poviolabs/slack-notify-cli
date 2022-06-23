@@ -2344,7 +2344,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^16.0.0":
+"dotenv@npm:^16.0.1":
   version: 16.0.1
   resolution: "dotenv@npm:16.0.1"
   checksum: f459ffce07b977b7f15d8cc4ee69cdff77d4dd8c5dc8c85d2d485ee84655352c2415f9dd09d42b5b5985ced3be186130871b34e2f3e2569ebc72fbc2e8096792
@@ -4532,20 +4532,20 @@ __metadata:
   linkType: hard
 
 "node-stage@poviolabs/node-stage#v1":
-  version: 1.0.16
-  resolution: "node-stage@https://github.com/poviolabs/node-stage.git#commit=0ce2beb3cf08e10a473fd5fcd399772848a113fc"
+  version: 1.0.24
+  resolution: "node-stage@https://github.com/poviolabs/node-stage.git#commit=69747239df46bb6eca852d4a9048d19fd095aa2a"
   dependencies:
     chalk: ^4.1.2
-    dotenv: ^16.0.0
+    dotenv: ^16.0.1
     prompt-sync: ^4.2.0
     reflect-metadata: ^0.1.13
     semver: ^7.3.7
-    simple-git: ^3.6.0
-    yaml: ^2.0.0
-    yargs: ^17.4.1
+    simple-git: ^3.9.0
+    yaml: ^2.1.1
+    yargs: ^17.5.1
   bin:
     node-stage: ./dist/sh.js
-  checksum: 7dc3f524666d99423a17ced68c1750d8ddcacacd319a5b78e876a55069cb71a6c7431527b00da4d06633f8ec006dbcedf56ca037fca5ed1276c3edc1a2f6b471
+  checksum: ab6b62f3064108133ffe85c29a6676fa25521d29d9c3acf8958875ce7d36462033c8cd740bd24de700897fd85efa4d34eaf0b3379cfb4d9c6d324e77fb980436
   languageName: node
   linkType: hard
 
@@ -5139,7 +5139,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"simple-git@npm:^3.6.0":
+"simple-git@npm:^3.9.0":
   version: 3.9.0
   resolution: "simple-git@npm:3.9.0"
   dependencies:
@@ -5884,7 +5884,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:^2.0.0":
+"yaml@npm:^2.1.1":
   version: 2.1.1
   resolution: "yaml@npm:2.1.1"
   checksum: f48bb209918aa57cfaf78ef6448d1a1f8187f45c746f933268b7023dc59e5456004611879126c9bb5ea55b0a2b1c2b392dfde436931ece0c703a3d754562bb96
@@ -5920,7 +5920,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs@npm:^17.4.1, yargs@npm:^17.5.1":
+"yargs@npm:^17.5.1":
   version: 17.5.1
   resolution: "yargs@npm:17.5.1"
   dependencies:
