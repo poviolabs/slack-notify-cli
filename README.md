@@ -1,6 +1,6 @@
 # Slack Notify Cli
 
-CLI tool to post slack messages
+CLI tool to post slack messages. Uses the [node-stage](https://github.com/poviolabs/node-stage]) tool for configuration.
 
 # Setup
 
@@ -22,10 +22,10 @@ slackNotify: &slackNotify
     projectName: NodeStage
 
 stages:
-  myapp-prd:
-    slackNotify:
-      <<: *slackNotify
-     
+    myapp-prd:
+      slackNotify:
+        <<: *slackNotify
+
 ```
 
 
@@ -75,6 +75,8 @@ Name of the branch deployed. Auto-detected from most CI/CD services.
 #### --dryRun --verbose
 
 Run and output the Slack template without actually sending the message.
+
+> More options can be found [here](https://github.com/poviolabs/node-stage#options).
 
 ## Development
 
