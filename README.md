@@ -1,6 +1,6 @@
 # Slack Notify Cli
 
-CLI tool to post slack messages. Uses the [node-stage](https://github.com/poviolabs/node-stage]) tool for configuration.
+CLI tool to post slack messages. Uses the [node-stage](https://github.com/poviolabs/node-stage) tool for configuration.
 
 # Setup
 
