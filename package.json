@@ -35,7 +35,7 @@
   ],
   "dependencies": {
     "@slack/web-api": "^6.7.2",
-    "node-stage": "poviolabs/node-stage#v1",
+    "node-stage": "github:poviolabs/node-stage.git#174bfa9570a37005cbd687b6d4111cec18eee20a",
     "yargs": "^17.5.1"
   },
   "devDependencies": {
@@ -63,8 +63,9 @@
     "typescript": "4.7.4"
   },
   "engines": {
-    "node": ">= 16.15.1",
-    "yarn": ">= 3.2"
+    "node": ">= 14",
+    "yarn": ">= 3.2",
+    "npm": ">= 8"
   },
   "jest": {
     "preset": "ts-jest",

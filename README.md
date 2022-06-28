@@ -11,6 +11,13 @@ yarn add slack-notify-cli@poviolabs/slack-notify-cli#v1
 yarn up slack-notify-cli@poviolabs/slack-notify-cli#v1
 ```
 
+
+or install globally
+
+```bash
+npm i -g slack-notify-cli@poviolabs/slack-notify-cli#v2 --force
+```
+
 ## Example
 
 ```yaml
