@@ -5,10 +5,10 @@ CLI tool to post slack messages. Uses the [node-stage](https://github.com/poviol
 # Setup
 
 ```bash
-yarn add slack-notify-cli@poviolabs/slack-notify-cli#v1
+yarn add slack-notify-cli@poviolabs/slack-notify-cli#v2
 
 # update
-yarn up slack-notify-cli@poviolabs/slack-notify-cli#v1
+yarn up slack-notify-cli@poviolabs/slack-notify-cli#v2
 ```
 
 

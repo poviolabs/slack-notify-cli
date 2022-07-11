@@ -15,29 +15,34 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.command = void 0;
 const web_api_1 = require("@slack/web-api");
 const node_stage_1 = require("node-stage");
+const cli_1 = require("node-stage/cli");
+const yargs_1 = require("node-stage/yargs");
+const git_1 = require("node-stage/git");
+const chalk_1 = require("node-stage/chalk");
+const version_helper_1 = require("../helpers/version.helper");
 class SlackOptions {
 }
 __decorate([
-    (0, node_stage_1.Option)({ envAlias: "PWD", demandOption: true }),
+    (0, yargs_1.Option)({ envAlias: "PWD", demandOption: true }),
     __metadata("design:type", String)
 ], SlackOptions.prototype, "pwd", void 0);
 __decorate([
-    (0, node_stage_1.Option)({ envAlias: "STAGE", demandOption: true }),
+    (0, yargs_1.Option)({ envAlias: "STAGE", demandOption: true }),
     __metadata("design:type", String)
 ], SlackOptions.prototype, "stage", void 0);
 __decorate([
-    (0, node_stage_1.Option)({ envAlias: "SERVICE" }),
+    (0, yargs_1.Option)({ envAlias: "SERVICE" }),
     __metadata("design:type", String)
 ], SlackOptions.prototype, "service", void 0);
 __decorate([
-    (0, node_stage_1.Option)({
+    (0, yargs_1.Option)({
         envAlias: "SLACK_ACCESS_TOKEN",
         demandOption: true,
     }),
     __metadata("design:type", String)
 ], SlackOptions.prototype, "accessToken", void 0);
 __decorate([
-    (0, node_stage_1.Option)({
+    (0, yargs_1.Option)({
         envAlias: "SLACK_CHANNEL",
         configAlias: (c) => c.slackNotify?.channel,
         demandOption: true,
@@ -45,7 +50,7 @@ __decorate([
     __metadata("design:type", String)
 ], SlackOptions.prototype, "channel", void 0);
 __decorate([
-    (0, node_stage_1.Option)({
+    (0, yargs_1.Option)({
         envAlias: "RELEASE",
         envAliases: ["CIRCLE_SHA1", "BITBUCKET_COMMIT", "GITHUB_SHA"],
         demandOption: true,
@@ -53,7 +58,7 @@ __decorate([
     __metadata("design:type", String)
 ], SlackOptions.prototype, "release", void 0);
 __decorate([
-    (0, node_stage_1.Option)({
+    (0, yargs_1.Option)({
         envAlias: "RELEASE_STRATEGY",
         default: "gitsha",
         choices: ["gitsha", "gitsha-stage"],
@@ -62,7 +67,7 @@ __decorate([
     __metadata("design:type", String)
 ], SlackOptions.prototype, "releaseStrategy", void 0);
 __decorate([
-    (0, node_stage_1.Option)({
+    (0, yargs_1.Option)({
         envAlias: "APP_VERSION",
         envAliases: ["CIRCLE_TAG", "BITBUCKET_TAG"],
         type: "string",
@@ -70,7 +75,7 @@ __decorate([
     __metadata("design:type", String)
 ], SlackOptions.prototype, "appVersion", void 0);
 __decorate([
-    (0, node_stage_1.Option)({
+    (0, yargs_1.Option)({
         demandOption: true,
         choices: ["success", "failure", "info"],
         default: "info",
@@ -78,27 +83,27 @@ __decorate([
     __metadata("design:type", String)
 ], SlackOptions.prototype, "messageType", void 0);
 __decorate([
-    (0, node_stage_1.Option)({ demandOption: false }),
+    (0, yargs_1.Option)({ demandOption: false }),
     __metadata("design:type", String)
 ], SlackOptions.prototype, "message", void 0);
 __decorate([
-    (0, node_stage_1.Option)({ demandOption: false, describe: "Prefix of the Pull Requests" }),
+    (0, yargs_1.Option)({ demandOption: false, describe: "Prefix of the Pull Requests" }),
     __metadata("design:type", String)
 ], SlackOptions.prototype, "autolinkPrefix", void 0);
 __decorate([
-    (0, node_stage_1.Option)({ demandOption: false, describe: "Prefix of the Ticket url" }),
+    (0, yargs_1.Option)({ demandOption: false, describe: "Prefix of the Ticket url" }),
     __metadata("design:type", String)
 ], SlackOptions.prototype, "autolinkTarget", void 0);
 __decorate([
-    (0, node_stage_1.Option)({ demandOption: false, describe: "Prefix of the Commit Url" }),
+    (0, yargs_1.Option)({ demandOption: false, describe: "Prefix of the Commit Url" }),
     __metadata("design:type", String)
 ], SlackOptions.prototype, "commitPrefix", void 0);
 __decorate([
-    (0, node_stage_1.Option)({ demandOption: false, describe: "Name of the project" }),
+    (0, yargs_1.Option)({ demandOption: false, describe: "Name of the project" }),
     __metadata("design:type", String)
 ], SlackOptions.prototype, "projectName", void 0);
 __decorate([
-    (0, node_stage_1.Option)({
+    (0, yargs_1.Option)({
         envAlias: "BRANCH_NAME",
         envAliases: ["CIRCLE_BRANCH", "BITBUCKET_BRANCH", "GITHUB_REF_NAME"],
         demandOption: false,
@@ -106,7 +111,7 @@ __decorate([
     __metadata("design:type", String)
 ], SlackOptions.prototype, "branchName", void 0);
 __decorate([
-    (0, node_stage_1.Option)({
+    (0, yargs_1.Option)({
         envAlias: "BUILD_URL",
         envAliases: ["CIRCLE_BUILD_URL"],
         demandOption: false,
@@ -114,19 +119,19 @@ __decorate([
     __metadata("design:type", String)
 ], SlackOptions.prototype, "buildUrl", void 0);
 __decorate([
-    (0, node_stage_1.Option)({
+    (0, yargs_1.Option)({
         demandOption: false,
     }),
     __metadata("design:type", Boolean)
 ], SlackOptions.prototype, "verbose", void 0);
 __decorate([
-    (0, node_stage_1.Option)({
+    (0, yargs_1.Option)({
         demandOption: false,
     }),
     __metadata("design:type", Boolean)
 ], SlackOptions.prototype, "dryRun", void 0);
 __decorate([
-    (0, node_stage_1.Option)({
+    (0, yargs_1.Option)({
         envAlias: "REPO_NAME",
         envAliases: [
             "CIRCLE_PROJECT_REPONAME",
@@ -142,9 +147,9 @@ exports.command = {
     describe: "Send Status to Slack",
     builder: async (y) => {
         return y
-            .options((0, node_stage_1.getYargsOptions)(SlackOptions))
+            .options((0, yargs_1.getYargsOptions)(SlackOptions))
             .middleware(async (_argv) => {
-            return (await (0, node_stage_1.loadYargsConfig)(SlackOptions, _argv, "slackNotify"));
+            return (await (0, yargs_1.loadYargsConfig)(SlackOptions, _argv, "slackNotify"));
         }, true);
     },
     handler: async (_argv) => {
@@ -152,20 +157,21 @@ exports.command = {
         const { pwd, accessToken, channel } = argv;
         const { message, text } = slackTemplate({
             ...argv,
-            gitSha: await (0, node_stage_1.getSha)(pwd),
-            gitShortSha: await (0, node_stage_1.getShortSha)(pwd),
-            commitMessage: await (0, node_stage_1.getCommitMessage)(pwd),
+            gitSha: await (0, git_1.getSha)(pwd),
+            gitShortSha: await (0, git_1.getShortSha)(pwd),
+            commitMessage: await (0, git_1.getCommitMessage)(pwd),
         });
         if (argv.verbose) {
-            (0, node_stage_1.logBanner)(`NodeStage ${(0, node_stage_1.getVersion)()}`);
-            for (const [k, v] of Object.entries(await (0, node_stage_1.getToolEnvironment)(argv))) {
-                (0, node_stage_1.logVariable)(k, v);
+            await (0, chalk_1.loadColors)();
+            (0, cli_1.logBanner)(`NodeStage ${(0, version_helper_1.getVersion)()}`);
+            for (const [k, v] of Object.entries(await (0, cli_1.getToolEnvironment)(argv))) {
+                (0, cli_1.logVariable)(k, v);
             }
-            (0, node_stage_1.logBanner)("Variables");
-            for (const [k] of Object.entries((0, node_stage_1.getYargsOption)(SlackOptions)).filter(([k]) => k !== "accessToken")) {
-                (0, node_stage_1.logVariable)(k, argv[k]);
+            (0, cli_1.logBanner)("Variables");
+            for (const [k] of Object.entries((0, yargs_1.getYargsOption)(SlackOptions)).filter(([k]) => k !== "accessToken")) {
+                (0, cli_1.logVariable)(k, argv[k]);
             }
-            (0, node_stage_1.logBanner)("Slack Message");
+            (0, cli_1.logBanner)("Slack Message");
             console.log(message);
         }
         if (argv.dryRun) {

@@ -2,12 +2,13 @@
 
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
+import { logError, logInfo } from "node-stage/cli";
 
 import { command as slackCommand } from "./commands/slack.command";
-import { getVersion, logError, logInfo } from "node-stage";
+import { getVersion } from "./helpers/version.helper";
 
 yargs(hideBin(process.argv))
-  .version(getVersion() || "unknown")
+  .version(getVersion(__dirname) || "unknown")
   .scriptName("node-stage")
   .command(slackCommand)
   .help()

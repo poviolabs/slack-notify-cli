@@ -5,22 +5,19 @@
 import yargs from "yargs";
 import { WebClient } from "@slack/web-api";
 
+import { ReleaseStrategy, Config } from "node-stage";
+import { getToolEnvironment, logBanner, logVariable } from "node-stage/cli";
 import {
-  Config,
-  getVersion,
-  getToolEnvironment,
-  logBanner,
-  logVariable,
-  getCommitMessage,
-  getSha,
-  getShortSha,
-  ReleaseStrategy,
   getYargsOptions,
   Option,
   YargsOptions,
   loadYargsConfig,
   getYargsOption,
-} from "node-stage";
+} from "node-stage/yargs";
+import { getCommitMessage, getSha, getShortSha } from "node-stage/git";
+import { loadColors } from "node-stage/chalk";
+
+import { getVersion } from "../helpers/version.helper";
 
 class SlackOptions implements YargsOptions {
   @Option({ envAlias: "PWD", demandOption: true })
@@ -154,6 +151,7 @@ export const command: yargs.CommandModule = {
     });
 
     if (argv.verbose) {
+      await loadColors();
       logBanner(`NodeStage ${getVersion()}`);
       for (const [k, v] of Object.entries(await getToolEnvironment(argv))) {
         logVariable(k, v);

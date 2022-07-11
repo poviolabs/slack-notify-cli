@@ -34,6 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@jest/types", "npm:28.1.1"],\
+            ["@poviolabs/node-stage", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#file:../node-stage#../node-stage::hash=662c97&locator=%40poviolabs%2Fslack-notify-cli%40workspace%3A."],\
             ["@slack/web-api", "npm:6.7.2"],\
             ["@swc/core", "npm:1.2.204"],\
             ["@swc/jest", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:0.2.21"],\
@@ -45,13 +46,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/yargs", "npm:17.0.10"],\
             ["@typescript-eslint/eslint-plugin", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:5.29.0"],\
             ["@typescript-eslint/parser", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:5.29.0"],\
+            ["chalk", "npm:4.1.2"],\
             ["eslint", "npm:8.18.0"],\
             ["eslint-config-prettier", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:8.5.0"],\
             ["eslint-plugin-import-helpers", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:1.2.1"],\
             ["eslint-plugin-prettier", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:4.0.0"],\
             ["jest", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:28.1.1"],\
-            ["node-stage", "https://github.com/poviolabs/node-stage.git#commit=69747239df46bb6eca852d4a9048d19fd095aa2a"],\
+            ["node-stage", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#https://github.com/poviolabs/node-stage.git#commit=036ac79851e23e07afa1a627f31def4f8baaa9f3"],\
             ["prettier", "npm:2.7.1"],\
+            ["prompt-sync", "npm:4.2.0"],\
+            ["simple-git", "npm:3.9.0"],\
             ["source-map-support", "npm:0.5.21"],\
             ["ts-jest", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:28.0.5"],\
             ["ts-node", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:10.8.1"],\
@@ -1314,12 +1318,50 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@poviolabs/node-stage", [\
+        ["file:../node-stage#../node-stage::hash=662c97&locator=%40poviolabs%2Fslack-notify-cli%40workspace%3A.", {\
+          "packageLocation": "./.yarn/unplugged/@poviolabs-node-stage-virtual-f842e2e230/node_modules/@poviolabs/node-stage/",\
+          "packageDependencies": [\
+            ["@poviolabs/node-stage", "file:../node-stage#../node-stage::hash=662c97&locator=%40poviolabs%2Fslack-notify-cli%40workspace%3A."]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#file:../node-stage#../node-stage::hash=662c97&locator=%40poviolabs%2Fslack-notify-cli%40workspace%3A.", {\
+          "packageLocation": "./.yarn/unplugged/@poviolabs-node-stage-virtual-f842e2e230/node_modules/@poviolabs/node-stage/",\
+          "packageDependencies": [\
+            ["@poviolabs/node-stage", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#file:../node-stage#../node-stage::hash=662c97&locator=%40poviolabs%2Fslack-notify-cli%40workspace%3A."],\
+            ["@types/chalk", null],\
+            ["@types/prompt-sync", null],\
+            ["@types/simple-git", null],\
+            ["@types/yargs", "npm:17.0.10"],\
+            ["chalk", "npm:4.1.2"],\
+            ["dotenv", "npm:16.0.1"],\
+            ["prompt-sync", "npm:4.2.0"],\
+            ["reflect-metadata", "npm:0.1.13"],\
+            ["simple-git", "npm:3.9.0"],\
+            ["yaml", "npm:2.1.1"],\
+            ["yargs", "npm:17.5.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/chalk",\
+            "@types/prompt-sync",\
+            "@types/simple-git",\
+            "@types/yargs",\
+            "chalk",\
+            "prompt-sync",\
+            "simple-git",\
+            "yargs"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@poviolabs/slack-notify-cli", [\
         ["workspace:.", {\
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@poviolabs/slack-notify-cli", "workspace:."],\
             ["@jest/types", "npm:28.1.1"],\
+            ["@poviolabs/node-stage", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#file:../node-stage#../node-stage::hash=662c97&locator=%40poviolabs%2Fslack-notify-cli%40workspace%3A."],\
             ["@slack/web-api", "npm:6.7.2"],\
             ["@swc/core", "npm:1.2.204"],\
             ["@swc/jest", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:0.2.21"],\
@@ -1331,13 +1373,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/yargs", "npm:17.0.10"],\
             ["@typescript-eslint/eslint-plugin", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:5.29.0"],\
             ["@typescript-eslint/parser", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:5.29.0"],\
+            ["chalk", "npm:4.1.2"],\
             ["eslint", "npm:8.18.0"],\
             ["eslint-config-prettier", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:8.5.0"],\
             ["eslint-plugin-import-helpers", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:1.2.1"],\
             ["eslint-plugin-prettier", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:4.0.0"],\
             ["jest", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:28.1.1"],\
-            ["node-stage", "https://github.com/poviolabs/node-stage.git#commit=69747239df46bb6eca852d4a9048d19fd095aa2a"],\
+            ["node-stage", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#https://github.com/poviolabs/node-stage.git#commit=036ac79851e23e07afa1a627f31def4f8baaa9f3"],\
             ["prettier", "npm:2.7.1"],\
+            ["prompt-sync", "npm:4.2.0"],\
+            ["simple-git", "npm:3.9.0"],\
             ["source-map-support", "npm:0.5.21"],\
             ["ts-jest", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:28.0.5"],\
             ["ts-node", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#npm:10.8.1"],\
@@ -4988,18 +5033,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["node-stage", [\
-        ["https://github.com/poviolabs/node-stage.git#commit=69747239df46bb6eca852d4a9048d19fd095aa2a", {\
-          "packageLocation": "./.yarn/cache/node-stage-https-2eb67db827-ab6b62f306.zip/node_modules/node-stage/",\
+        ["https://github.com/poviolabs/node-stage.git#commit=036ac79851e23e07afa1a627f31def4f8baaa9f3", {\
+          "packageLocation": "./.yarn/cache/node-stage-https-d80710c287-63b5965aea.zip/node_modules/node-stage/",\
           "packageDependencies": [\
-            ["node-stage", "https://github.com/poviolabs/node-stage.git#commit=69747239df46bb6eca852d4a9048d19fd095aa2a"],\
+            ["node-stage", "https://github.com/poviolabs/node-stage.git#commit=036ac79851e23e07afa1a627f31def4f8baaa9f3"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#https://github.com/poviolabs/node-stage.git#commit=036ac79851e23e07afa1a627f31def4f8baaa9f3", {\
+          "packageLocation": "./.yarn/__virtual__/node-stage-virtual-a4a66f13b9/0/cache/node-stage-https-d80710c287-63b5965aea.zip/node_modules/node-stage/",\
+          "packageDependencies": [\
+            ["node-stage", "virtual:0d0b8043090240fbd1f8d9a6e95a3b3132737bd8a6412f3a55219c575077c2025e67027996cddaf695b2340723bd883208b0445396eb271c29538fdd5b145caf#https://github.com/poviolabs/node-stage.git#commit=036ac79851e23e07afa1a627f31def4f8baaa9f3"],\
+            ["@types/chalk", null],\
+            ["@types/prompt-sync", null],\
+            ["@types/simple-git", null],\
+            ["@types/yargs", "npm:17.0.10"],\
             ["chalk", "npm:4.1.2"],\
             ["dotenv", "npm:16.0.1"],\
             ["prompt-sync", "npm:4.2.0"],\
             ["reflect-metadata", "npm:0.1.13"],\
-            ["semver", "npm:7.3.7"],\
             ["simple-git", "npm:3.9.0"],\
             ["yaml", "npm:2.1.1"],\
             ["yargs", "npm:17.5.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/chalk",\
+            "@types/prompt-sync",\
+            "@types/simple-git",\
+            "@types/yargs",\
+            "chalk",\
+            "prompt-sync",\
+            "simple-git",\
+            "yargs"\
           ],\
           "linkType": "HARD"\
         }]\
