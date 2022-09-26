@@ -22,7 +22,7 @@ npm i -g slack-notify-cli@poviolabs/slack-notify-cli#v2 --force
 
 ```yaml
 slackNotify: &slackNotify
-    slackChannel: C03AXDS9F2B
+    channel: C03AXDS9F2B
     autolinkPrefix: NS-
     autolinkTarget: https://github.com/poviolabs/node-stage/issues/
     commitPrefix: https://github.com/poviolabs/node-stage/commit/
