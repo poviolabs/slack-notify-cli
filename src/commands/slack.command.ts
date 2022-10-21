@@ -5,17 +5,17 @@
 import yargs from "yargs";
 import { WebClient } from "@slack/web-api";
 
-import { ReleaseStrategy, Config } from "node-stage";
-import { getToolEnvironment, logBanner, logVariable } from "node-stage/cli";
+import { ReleaseStrategy, Config } from "@povio/node-stage";
+import { getToolEnvironment, logBanner, logVariable } from "@povio/node-stage/cli";
 import {
   getYargsOptions,
   Option,
   YargsOptions,
   loadYargsConfig,
   getYargsOption,
-} from "node-stage/yargs";
-import { getCommitMessage, getSha, getShortSha } from "node-stage/git";
-import { loadColors } from "node-stage/chalk";
+} from "@povio/node-stage/yargs";
+import { getCommitMessage, getSha, getShortSha } from "@povio/node-stage/git";
+import { loadColors } from "@povio/node-stage/chalk";
 
 import { getVersion } from "../helpers/version.helper";
 

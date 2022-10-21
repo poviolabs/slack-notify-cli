@@ -838,9 +838,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@poviolabs/node-stage@file:../node-stage::locator=%40poviolabs%2Fslack-notify-cli%40workspace%3A.":
-  version: 2.0.1
-  resolution: "@poviolabs/node-stage@file:../node-stage#../node-stage::hash=662c97&locator=%40poviolabs%2Fslack-notify-cli%40workspace%3A."
+"@povio/node-stage@npm:^2.0.6":
+  version: 2.0.6
+  resolution: "@povio/node-stage@npm:2.0.6"
   dependencies:
     dotenv: ^16.0.1
     reflect-metadata: ^0.1.13
@@ -860,17 +860,17 @@ __metadata:
     yargs:
       optional: true
   bin:
-    node-stage: ./dist/sh.js
-  checksum: 6b0a1fe99b7c7dcb7147036ad1128cefb4ed4dbc810ab6436e009f8949f560561055ea3b03e57e06b4991ce5f95b7415965bb56326108ef8ad959d869ddc0eb9
+    node-stage: dist/sh.js
+  checksum: 30ea31e62c66e06c57816d96de90519c4b3fa84ff1ea7bfc7f21fbb3727572ce179a4133bfdd2586e969670b23295ff27730495ad2a35956cb387750a2f5762e
   languageName: node
   linkType: hard
 
-"@poviolabs/slack-notify-cli@workspace:.":
+"@povio/slack-notify-cli@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@poviolabs/slack-notify-cli@workspace:."
+  resolution: "@povio/slack-notify-cli@workspace:."
   dependencies:
     "@jest/types": ^28.1.1
-    "@poviolabs/node-stage": ../node-stage
+    "@povio/node-stage": ^2.0.6
     "@slack/web-api": ^6.7.2
     "@swc/core": ^1.2.204
     "@swc/jest": ^0.2.21
@@ -888,7 +888,6 @@ __metadata:
     eslint-plugin-import-helpers: ^1.2.1
     eslint-plugin-prettier: ^4.0.0
     jest: ^28.1.1
-    node-stage: "poviolabs/node-stage#v2"
     prettier: ^2.7.1
     prompt-sync: ^4.2.0
     simple-git: ^3.9.0
@@ -3899,33 +3898,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-stage@poviolabs/node-stage#v2":
-  version: 2.0.1
-  resolution: "node-stage@https://github.com/poviolabs/node-stage.git#commit=036ac79851e23e07afa1a627f31def4f8baaa9f3"
-  dependencies:
-    dotenv: ^16.0.1
-    reflect-metadata: ^0.1.13
-    yaml: ^2.1.1
-  peerDependencies:
-    chalk: ^4.1.2
-    prompt-sync: ^4.2.0
-    simple-git: ^3.9.0
-    yargs: ^17.5.1
-  peerDependenciesMeta:
-    chalk:
-      optional: true
-    prompt-sync:
-      optional: true
-    simple-git:
-      optional: true
-    yargs:
-      optional: true
-  bin:
-    node-stage: ./dist/sh.js
-  checksum: 63b5965aeaf69c1336ec03dc9531991d0975584fc30bba3427fecaa9b849bf09d0f3d53ed1b734ce6ad5593dc643ed2016a21f9c49fe375bc0e01167f78f17ad
-  languageName: node
-  linkType: hard
-
 "nopt@npm:^5.0.0":
   version: 5.0.0
   resolution: "nopt@npm:5.0.0"
@@ -4883,7 +4855,7 @@ __metadata:
 
 "typescript@patch:typescript@4.7.4#~builtin<compat/typescript>":
   version: 4.7.4
-  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=7ad353"
+  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=701156"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
