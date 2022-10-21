@@ -4,11 +4,11 @@ import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 
 import { command as slackCommand } from "./commands/slack.command";
-import { getVersion, logError, logInfo } from "node-stage";
+import { getVersion, logError, logInfo } from "@povio/node-stage";
 
 yargs(hideBin(process.argv))
   .version(getVersion() || "unknown")
-  .scriptName("node-stage")
+  .scriptName("@povio/node-stage")
   .command(slackCommand)
   .help()
   .demandCommand(1)

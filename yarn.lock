@@ -838,11 +838,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@poviolabs/slack-notify-cli@workspace:.":
+"@povio/node-stage@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "@povio/node-stage@npm:1.1.3"
+  dependencies:
+    chalk: ^4.1.2
+    dotenv: ^16.0.1
+    prompt-sync: ^4.2.0
+    reflect-metadata: ^0.1.13
+    semver: ^7.3.7
+    simple-git: ^3.9.0
+    yaml: ^2.1.1
+    yargs: ^17.5.1
+  bin:
+    node-stage: dist/sh.js
+  checksum: 962211a6bbd6af82a3f14a3137568c2de16385b6513e30db60d6152e3cc6eaebb019f9f01cbb618d4ca37b611b1c69b447de6be8aa0b1811f35825b60ecb3061
+  languageName: node
+  linkType: hard
+
+"@povio/slack-notify-cli@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@poviolabs/slack-notify-cli@workspace:."
+  resolution: "@povio/slack-notify-cli@workspace:."
   dependencies:
     "@jest/types": ^28.1.1
+    "@povio/node-stage": ^1.1.3
     "@slack/web-api": ^6.7.2
     "@swc/core": ^1.2.204
     "@swc/jest": ^0.2.21
@@ -859,7 +878,6 @@ __metadata:
     eslint-plugin-import-helpers: ^1.2.1
     eslint-plugin-prettier: ^4.0.0
     jest: ^28.1.1
-    node-stage: "poviolabs/node-stage#v1"
     prettier: ^2.7.1
     source-map-support: ^0.5.21
     ts-jest: ^28.0.5
@@ -3868,24 +3886,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-stage@poviolabs/node-stage#v1":
-  version: 1.0.24
-  resolution: "node-stage@https://github.com/poviolabs/node-stage.git#commit=69747239df46bb6eca852d4a9048d19fd095aa2a"
-  dependencies:
-    chalk: ^4.1.2
-    dotenv: ^16.0.1
-    prompt-sync: ^4.2.0
-    reflect-metadata: ^0.1.13
-    semver: ^7.3.7
-    simple-git: ^3.9.0
-    yaml: ^2.1.1
-    yargs: ^17.5.1
-  bin:
-    node-stage: ./dist/sh.js
-  checksum: ab6b62f3064108133ffe85c29a6676fa25521d29d9c3acf8958875ce7d36462033c8cd740bd24de700897fd85efa4d34eaf0b3379cfb4d9c6d324e77fb980436
-  languageName: node
-  linkType: hard
-
 "nopt@npm:^5.0.0":
   version: 5.0.0
   resolution: "nopt@npm:5.0.0"
@@ -4843,7 +4843,7 @@ __metadata:
 
 "typescript@patch:typescript@4.7.4#~builtin<compat/typescript>":
   version: 4.7.4
-  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=7ad353"
+  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=701156"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver

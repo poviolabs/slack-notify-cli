@@ -20,7 +20,7 @@ import {
   YargsOptions,
   loadYargsConfig,
   getYargsOption,
-} from "node-stage";
+} from "@povio/node-stage";
 
 class SlackOptions implements YargsOptions {
   @Option({ envAlias: "PWD", demandOption: true })

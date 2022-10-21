@@ -14,7 +14,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.command = void 0;
 const web_api_1 = require("@slack/web-api");
-const node_stage_1 = require("node-stage");
+const node_stage_1 = require("@povio/node-stage");
 class SlackOptions {
 }
 __decorate([
