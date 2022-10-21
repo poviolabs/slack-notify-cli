@@ -1,7 +1,7 @@
 {
-  "name": "@poviolabs/slack-notify-cli",
-  "version": "2.0.1",
-  "packageManager": "yarn@3.2.1",
+  "name": "@povio/slack-notify-cli",
+  "version": "2.0.3",
+  "packageManager": "yarn@3.2.4",
   "bin": "./dist/sh.js",
   "scripts": {
     "build": "yarn clean && npm version patch --no-git-tag-version && yarn run build:cli",
@@ -31,12 +31,14 @@
     "type": "git"
   },
   "contributors": [
-    "Marko Zabreznik <marko.zabreznik@povio.com>"
+    "Marko Zabreznik <marko.zabreznik@povio.com>",
+    "Adrian Jarc <adrian.jarc@povio.com>",
+    "Adam Giacomelli <adam.giacomelli@povio.com>"
   ],
   "dependencies": {
+    "@povio/node-stage": "^2.0.6",
     "@slack/web-api": "^6.7.2",
     "chalk": "^4.1.2",
-    "node-stage": "poviolabs/node-stage#v2",
     "prompt-sync": "^4.2.0",
     "simple-git": "^3.9.0",
     "yargs": "^17.5.1"

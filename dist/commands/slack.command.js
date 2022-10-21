@@ -14,11 +14,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.command = void 0;
 const web_api_1 = require("@slack/web-api");
-const node_stage_1 = require("node-stage");
-const cli_1 = require("node-stage/cli");
-const yargs_1 = require("node-stage/yargs");
-const git_1 = require("node-stage/git");
-const chalk_1 = require("node-stage/chalk");
+const node_stage_1 = require("@povio/node-stage");
+const cli_1 = require("@povio/node-stage/cli");
+const yargs_1 = require("@povio/node-stage/yargs");
+const git_1 = require("@povio/node-stage/git");
+const chalk_1 = require("@povio/node-stage/chalk");
 const version_helper_1 = require("../helpers/version.helper");
 class SlackOptions {
 }
